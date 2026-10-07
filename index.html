@@ -9,133 +9,72 @@
 <meta property="og:description" content="성경은 사실이다 · 2027. 1. 20(수) ~ 24(일) · 골든타워 6층">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
-  --sand-1:#d8ccc0; --sand-2:#b9a999; --sand-3:#9c8b7c;
-  --ink:#1f2233; --paper:#f1ece6; --paper-2:#e6ded5;
-  --mute:#6e6259; --light:#f7f3ee; --line:rgba(31,34,51,.16);
-  --serif-en:"Playfair Display","Times New Roman",Georgia,serif;
-  --serif-ko:"Gowun Batang","Noto Serif KR","Nanum Myeongjo",serif;
-  --sans:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
-  --bg:var(--paper); --fg:var(--ink);
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){ --paper:#24211f; --paper-2:#2d2926; --ink:#ece5dc; --mute:#b3a596; --line:rgba(236,229,220,.16); }
-}
-:root[data-theme="dark"]{ --paper:#24211f; --paper-2:#2d2926; --ink:#ece5dc; --mute:#b3a596; --line:rgba(236,229,220,.16); }
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *,*::before,*::after{box-sizing:inherit;margin:0;padding:0}
-body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.7;word-break:keep-all;-webkit-font-smoothing:antialiased}
-.wrap{max-width:480px;margin:0 auto;background:var(--paper);min-height:100%}
-
-/* HERO */
-.hero{position:relative;min-height:100svh;overflow:hidden;color:#1f2233;
-  background:
-    radial-gradient(120% 60% at 70% 8%, #e9e1d8 0%, transparent 60%),
-    linear-gradient(180deg,var(--sand-1) 0%,var(--sand-2) 58%,var(--sand-3) 100%);
-  display:flex;flex-direction:column;padding:56px 28px 40px}
-.hero::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;mix-blend-mode:multiply;
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .4  0 0 0 0 .35  0 0 0 0 .3  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
-.ask{font-family:var(--serif-ko);font-size:15px;color:#3b3631;min-height:1.7em}
-.ask .blank{display:inline-block;min-width:4.5em;border-bottom:1px solid #3b3631;text-align:center;font-weight:700;color:#1f2233;transition:opacity .4s}
-.title-en{font-family:var(--serif-en);font-weight:500;font-size:clamp(46px,14vw,64px);line-height:.95;letter-spacing:-.01em;margin-top:22px}
-.title-en i{display:block;font-weight:400;font-size:.42em;letter-spacing:.32em;margin-top:14px}
-.title-ko{font-family:var(--serif-ko);font-weight:700;font-size:22px;margin-top:18px;letter-spacing:.02em}
-.figure{position:relative;flex:1;min-height:190px;padding:10px 0;display:flex;justify-content:center;align-items:center}
-.figure svg{width:min(34%,130px);height:auto;overflow:visible}
-.shadow{transform-origin:118px 121px;animation:grow 4.5s cubic-bezier(.3,.6,.2,1) .4s both}
-@keyframes grow{from{transform:scale(.25,.25);opacity:.2}to{transform:scale(1,1);opacity:1}}
-.verse{font-family:var(--serif-ko);color:var(--light);font-size:17px;line-height:1.95;text-shadow:0 1px 10px rgba(60,48,38,.25)}
-.verse cite{display:block;font-style:normal;font-size:12.5px;opacity:.8;margin-top:10px}
-.hero-meta{margin-top:30px;display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
-.hero-date{font-family:var(--serif-en);font-weight:600;font-size:22px;letter-spacing:.01em}
-.hero-date small{font-family:var(--sans);font-weight:500;font-size:13px}
-.host{font-size:13px;margin-top:4px}
-.host b{font-weight:700}
-.scroll-cue{font-size:12px;color:#3b3631;writing-mode:vertical-rl;letter-spacing:.2em;opacity:.7}
-@media (prefers-reduced-motion:reduce){.shadow{animation:none}.ask .blank{transition:none}}
-
-/* SECTIONS */
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);line-height:1.7;word-break:keep-all;-webkit-font-smoothing:antialiased}
+.wrap{max-width:480px;margin:0 auto;background:var(--bg)}
 section{padding:56px 28px;border-top:1px solid var(--line)}
-h2{font-family:var(--serif-ko);font-weight:700;font-size:22px;margin-bottom:6px}
-.h2-en{font-family:var(--serif-en);font-style:italic;color:var(--mute);font-size:15px;margin-bottom:28px}
+h2{font-family:var(--head);font-size:22px;margin-bottom:6px}
+.h2-en{color:var(--mute);font-size:14px;margin-bottom:28px}
 .info{display:grid;grid-template-columns:3.2em 1fr;row-gap:16px;column-gap:14px;font-size:15px}
-.info dt{font-weight:700}
-.info dd a{color:inherit}
-.invite-text{font-family:var(--serif-ko);font-size:16.5px;line-height:2;color:var(--ink)}
-.invite-text p+p{margin-top:16px}
-
+.info dt{font-weight:700}.info dd a{color:inherit}
+.invite-text{font-size:16px;line-height:2}.invite-text p+p{margin-top:16px}
 .day{display:grid;grid-template-columns:68px 1fr;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
 .day:first-of-type{border-top:1px solid var(--line)}
-.day .d{font-family:var(--serif-en);font-size:28px;line-height:1;font-weight:500}
-.day .d small{display:block;font-family:var(--sans);font-size:12px;color:var(--mute);margin-top:6px;font-weight:500}
+.day .d{font-size:28px;line-height:1}
+.day .d small{display:block;font-family:var(--sans);font-size:12px;color:var(--mute);margin-top:6px;font-weight:500;letter-spacing:0}
 .day ul{list-style:none;font-size:15px}
 .day li{display:flex;gap:12px;padding:3px 0}
-.day li time{color:var(--mute);min-width:4.6em;flex:none;font-variant-numeric:tabular-nums}
-.day li.talk span{font-weight:700}
-
+.day li time{color:var(--mute);min-width:4.6em;flex:none}
+.day li.talk span{font-weight:700;color:var(--accent)}
 .addr{font-size:16px;font-weight:500}
-.addr small{display:block;color:var(--mute);font-weight:400;font-size:14px;margin-top:4px}
 .maps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:22px}
-.btn{display:flex;align-items:center;justify-content:center;min-height:48px;padding:10px;border:1px solid var(--ink);color:var(--ink);background:transparent;text-decoration:none;font:500 14px var(--sans);border-radius:2px;cursor:pointer}
-.btn:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
-.btn.solid{background:var(--ink);color:var(--paper)}
+.btn{display:flex;align-items:center;justify-content:center;min-height:48px;padding:10px;border:1px solid var(--fg);color:var(--fg);background:transparent;text-decoration:none;font:500 14px var(--sans);cursor:pointer;border-radius:var(--r)}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.btn.solid{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
 .transit{margin-top:26px;font-size:14.5px}
 .transit p{display:grid;grid-template-columns:3.2em 1fr;gap:14px;padding:6px 0}
-.transit b{font-weight:700}
-
-.share{background:var(--paper-2);text-align:center}
+.transit small{color:var(--mute)!important}
+.share{background:var(--bg2);text-align:center}
 .share .btn{width:100%;margin-top:10px}
 .share-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--ink);color:var(--paper);padding:10px 18px;font-size:14px;opacity:0;transition:.3s;pointer-events:none;border-radius:2px}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--fg);color:var(--bg);padding:10px 18px;font-size:14px;opacity:0;transition:.3s;pointer-events:none;border-radius:var(--r)}
 .toast.on{opacity:1;transform:translate(-50%,0)}
 footer{padding:28px;text-align:center;font-size:12.5px;color:var(--mute)}
+.ask .blank{display:inline-block;min-width:4.5em;border-bottom:1px solid currentColor;text-align:center;font-weight:700;transition:opacity .4s}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+:root{--bg:#f4ece4;--bg2:#ebe0d5;--fg:#3a1219;--mute:#7e6a66;--line:rgba(58,18,25,.15);--accent:#8a2c3d;--on-accent:#f4ece4;--r:4px;
+--head:"Nanum Myeongjo","Noto Serif CJK KR",serif;--sans:"Noto Sans KR","Noto Sans CJK KR",sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1e1214;--bg2:#26171a;--fg:#f1e6df;--mute:#b39d98;--line:rgba(241,230,223,.14);--accent:#e3a2a8;--on-accent:#1e1214;}}
+:root[data-theme="dark"]{--bg:#1e1214;--bg2:#26171a;--fg:#f1e6df;--mute:#b39d98;--line:rgba(241,230,223,.14);--accent:#e3a2a8;--on-accent:#1e1214;}
+
+h2{font-weight:800}.day .d{font-family:var(--head);font-weight:800;color:var(--accent)}.invite-text{font-family:var(--head)}
+.hero{min-height:100svh;background:#5b1e2a;color:#f4ece4;padding:40px 28px 32px;display:flex;flex-direction:column}
+.top{display:flex;justify-content:space-between;font-size:12.5px;opacity:.7}
+.qs{margin-top:auto;font-family:var(--head);font-weight:400;font-size:clamp(25px,7.6vw,32px);line-height:1.6}
+.qs p{opacity:0;animation:in 1s ease forwards}
+.qs p:nth-child(1){animation-delay:.3s}.qs p:nth-child(2){animation-delay:1.3s}.qs p:nth-child(3){animation-delay:2.3s}
+.qs p:nth-child(3){font-weight:800}
+@keyframes in{to{opacity:1}}
+.ans{margin-top:28px;padding-top:20px;border-top:1px solid rgba(244,236,228,.35);font-family:var(--head);font-size:17px;opacity:0;animation:in 1s ease 3.4s forwards}
+.ans b{display:block;font-weight:800;font-size:26px;margin-top:4px;color:#f1c6b8}
+.verse{margin-top:30px;font-family:var(--head);font-size:15px;line-height:1.9;opacity:.85}
+.verse cite{display:block;font-style:normal;font-size:12px;opacity:.7;margin-top:4px}
+.meta{margin-top:auto;padding-top:28px;display:flex;justify-content:space-between;align-items:flex-end;font-size:13px}
+.meta .d{font-family:var(--head);font-weight:800;font-size:22px}
+@media (prefers-reduced-motion:reduce){.qs p,.ans{opacity:1}}
 </style>
 </head>
 <body>
 <div class="wrap">
-
-<header class="hero">
-  <p class="ask"><span class="blank" id="word">삶의 의미</span>에 대해 고민하는 당신을 초대합니다</p>
-  <h1 class="title-en">The Bible<br>is True<i>INVITATION</i></h1>
-  <p class="title-ko">성경은 사실이다</p>
-
-  <div class="figure" aria-hidden="true">
-    <svg viewBox="40 60 120 200">
-      <defs><filter id="soft"><feGaussianBlur stdDeviation="1.1"/></filter></defs>
-      <g class="shadow" filter="url(#soft)" fill="#1d1a1c" opacity=".9">
-        <path d="M114 121 C106 150 94 188 80 220 C76 229 70 236 66 233 C63 230 66 222 70 214 C80 188 100 150 123 121 Z"/>
-        <ellipse cx="66" cy="240" rx="6.5" ry="9" transform="rotate(25 66 240)"/>
-      </g>
-      <g fill="#1d1a1c">
-        <path d="M113.5 121 L115 100 L121.5 100 L123.5 121 Z"/>
-        <rect x="109.5" y="84" width="17" height="21" rx="6.5"/>
-        <circle cx="117.5" cy="77" r="6.6"/>
-        <path d="M123 86 L134 83 L135 91 L124 94 Z" fill="#f2ede6"/>
-        <path d="M126 88 L131 90" stroke="#1d1a1c" stroke-width=".8"/>
-      </g>
-    </svg>
-  </div>
-
-  <blockquote class="verse">
-    너는 청년의 때 곧 곤고한 날이 이르기 전,<br>
-    나는 아무 낙이 없다고 할 해가<br>
-    가깝기 전에 너의 창조자를 기억하라
-    <cite>전도서 12장 1절</cite>
-  </blockquote>
-
-  <div class="hero-meta">
-    <div>
-      <p class="hero-date">2027. 1. 20<small>(수)</small> – 24<small>(일)</small></p>
-      <p class="host">주최 <b>기독교복음침례회 부천교회</b></p>
-    </div>
-    <span class="scroll-cue">아래로</span>
-  </div>
-</header>
+<header class="hero"><div class="top"><span>부천 성경세미나</span><span>2027. 1</span></div>
+<div class="qs"><p>나는 어디서 왔는가.</p><p>나는 왜 살아가는가.</p><p>나는 어디로 가는가.</p></div>
+<p class="ans">성경은 그 답을 알고 있습니다.<b>성경은 사실이다</b></p>
+<blockquote class="verse">너는 청년의 때 곧 곤고한 날이 이르기 전,<br>나는 아무 낙이 없다고 할 해가<br>가깝기 전에 너의 창조자를 기억하라<cite>전도서 12장 1절</cite></blockquote>
+<div class="meta"><p class="d">1. 20 – 1. 24</p><p>기독교복음침례회 부천교회</p></div></header>
 <section class="video">
   <style>.video .frame{position:relative;width:100%;aspect-ratio:16/9;background:rgba(0,0,0,.08);border:1px solid var(--line);overflow:hidden}
   .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
@@ -146,14 +85,10 @@ footer{padding:28px;text-align:center;font-size:12.5px;color:var(--mute)}
   <a class="btn yt" href="https://youtu.be/l_5ZyV4oPSg" target="_blank" rel="noopener">유튜브에서 보기</a>
 </section>
 
-
 <section>
   <h2>초대의 글</h2>
   <p class="h2-en">To you, with an open seat</p>
-  <div class="invite-text">
-    <p>바쁜 하루 속에서도 문득, 나는 어디서 왔고 어디로 가는지 묻게 되는 순간이 있습니다.</p>
-    <p>성경은 그 질문에 대해 분명하게 말하고 있습니다. 새해의 첫 달, 성경이 들려주는 이야기를 함께 들어보시길 바랍니다. 당신의 자리를 비워두고 기다리겠습니다.</p>
-  </div>
+  <div class="invite-text"><p>성경을 그저 좋은 교훈이 담긴 오래된 책으로만 알고 계셨나요? 이번에는 “정말 사실일까?” 하는 궁금한 마음 하나만 가지고 와주세요.</p><p>1월의 어느 날, 성경은 정말 사실에 근거한 이야기인지, 그 안의 내용은 어디까지 믿을 수 있는지 직접 듣고 생각해보는 시간을 마련했습니다. 잘 몰라도 괜찮습니다. 편하게 오세요.</p></div>
 </section>
 
 <section>
@@ -162,7 +97,7 @@ footer{padding:28px;text-align:center;font-size:12.5px;color:var(--mute)}
   <dl class="info">
     <dt>일시</dt><dd>2027년 1월 20일(수) ~ 1월 24일(일)</dd>
     <dt>장소</dt><dd>경기 부천시 원미구 길주로 319<br>골든타워 6층 부천교회</dd>
-    <dt>문의</dt><dd><a href="tel:01000000000">010-0000-0000</a> / <a href="tel:01000000000">010-0000-0000</a></dd>
+    <dt>문의</dt><dd>설영일 <a href="tel:01083098987">010-8309-8987</a><br>이황균 <a href="tel:01052923909">010-5292-3909</a></dd>
   </dl>
 </section>
 
@@ -211,7 +146,7 @@ footer{padding:28px;text-align:center;font-size:12.5px;color:var(--mute)}
   var words=["삶의 의미","죽음 이후","진짜 행복","나의 미래","성경"];
   var el=document.getElementById("word"),i=0;
   var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
-  setInterval(function(){
+  if(el)setInterval(function(){
     i=(i+1)%words.length;
     if(reduce){el.textContent=words[i];return;}
     el.style.opacity=0;
