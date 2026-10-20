@@ -89,6 +89,10 @@ h2{font-weight:800}.day .d{font-family:var(--head);font-weight:800;color:var(--a
 .vbtn.on{font-weight:700;color:var(--accent)}
 .vbtn.on .vn{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
 .vlinks{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
+.vlinks .wide{grid-column:1/3}
+.vt{display:flex;flex-direction:column;gap:2px}
+.vt .src{font-style:normal;font-size:11.5px;font-weight:500;color:var(--mute);letter-spacing:.02em}
+.vbtn.on .vt .src{color:var(--accent)}
 </style>
 </head>
 <body>
@@ -119,12 +123,12 @@ h2{font-weight:800}.day .d{font-family:var(--head);font-weight:800;color:var(--a
 <section>
   <h2>집회 일정</h2>
   <p class="h2-en">Schedule</p>
-  <div class="day"><p class="d">20<small>수요일</small></p><ul><li class=""><time>저녁 8시</time><span>성경은 사실이다 1</span></li></ul></div>
-  <div class="day"><p class="d">21<small>목요일</small></p><ul><li class=""><time>저녁 8시</time><span>성경은 사실이다 2</span></li></ul></div>
-  <div class="day"><p class="d">22<small>금요일</small></p><ul><li class=""><time>저녁 8시</time><span>성경은 사실이다 3</span></li></ul></div>
-  <div class="day"><p class="d">23<small>토요일</small></p><ul><li class=""><time>오후 2시</time><span>성경은 사실이다 4</span></li><li class=""><time>이어서</time><span>성경은 사실이다 5</span></li><li class="talk"><time>저녁</time><span>특강</span></li></ul></div>
-  <div class="day"><p class="d">24<small>일요일</small></p><ul><li class=""><time>오후 2시</time><span>성경은 사실이다 6</span></li><li class=""><time>이어서</time><span>성경은 사실이다 7</span></li><li class=""><time>저녁</time><span>성경은 사실이다 8</span></li><li class="talk"><time>이어서</time><span>성찬식</span></li></ul></div>
-  <p class="note">평일은 저녁에, 주말은 오후 2시부터 저녁까지 이어집니다.<br>세부 시간은 사정에 따라 변경될 수 있습니다.</p>
+  <div class="day"><p class="d">20<small>수요일</small></p><ul><li class=""><time>저녁 8시</time><span>성경 강연</span></li></ul></div>
+  <div class="day"><p class="d">21<small>목요일</small></p><ul><li class=""><time>저녁 8시</time><span>성경 강연</span></li></ul></div>
+  <div class="day"><p class="d">22<small>금요일</small></p><ul><li class=""><time>저녁 8시</time><span>성경 강연</span></li></ul></div>
+  <div class="day"><p class="d">23<small>토요일</small></p><ul><li class=""><time>오후 2시</time><span>성경 강연</span></li><li class=""><time>이어서</time><span>성경 강연</span></li><li class="talk"><time>저녁</time><span>특강</span></li></ul></div>
+  <div class="day"><p class="d">24<small>일요일</small></p><ul><li class=""><time>오후 2시</time><span>성경 강연</span></li><li class=""><time>이어서</time><span>성경 강연</span></li><li class="talk"><time>이어서</time><span>성찬식</span></li></ul></div>
+  <p class="note">평일은 저녁 8시, 토요일은 오후 2시부터 저녁까지,<br>일요일은 오후 2시부터 진행됩니다.<br>세부 시간은 사정에 따라 변경될 수 있습니다.</p>
 </section>
 
 <section class="qa">
@@ -144,8 +148,8 @@ h2{font-weight:800}.day .d{font-family:var(--head);font-weight:800;color:var(--a
   <p class="h2-en">Watch</p>
   <div class="frame"><iframe id="vframe" src="https://www.youtube-nocookie.com/embed/l_5ZyV4oPSg?rel=0&playsinline=1" title="성경세미나 영상" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
   <p class="vnow" id="vnow">세미나 소개 영상</p>
-  <ul class="vlist"><li><button type="button" class="vbtn on" data-i="0" data-src="https://www.youtube-nocookie.com/embed/l_5ZyV4oPSg?rel=0&playsinline=1" data-yt="https://youtu.be/l_5ZyV4oPSg"><span class="vn">1</span><span>세미나 소개 영상</span></button></li><li><button type="button" class="vbtn" data-i="1" data-src="https://www.youtube-nocookie.com/embed/0yo7SfOx9IQ?rel=0&playsinline=1" data-yt="https://www.youtube.com/watch?v=0yo7SfOx9IQ"><span class="vn">2</span><span>성경은 사실이다 1회 · 창조는 과학적 사실이다</span></button></li><li><button type="button" class="vbtn" data-i="2" data-src="https://www.youtube-nocookie.com/embed/videoseries?list=PLAvB3XNoE5TZnIw5zsKDbws8NYAKd1eE9&rel=0&playsinline=1" data-yt="https://www.youtube.com/playlist?list=PLAvB3XNoE5TZnIw5zsKDbws8NYAKd1eE9"><span class="vn">3</span><span>성경은 사실이다 전체 강연 (재생목록)</span></button></li><li><button type="button" class="vbtn" data-i="3" data-src="https://www.youtube-nocookie.com/embed/N8OdLIDWIgI?rel=0&playsinline=1" data-yt="https://www.youtube.com/watch?v=N8OdLIDWIgI"><span class="vn">4</span><span>권신찬 목사의 성경은 사실이다 1회 · 거듭남과 영혼의 평화</span></button></li><li><button type="button" class="vbtn" data-i="4" data-src="https://www.youtube-nocookie.com/embed/videoseries?list=UUQSQJ5tJfzVXprhvoajyelg&rel=0&playsinline=1" data-yt="https://www.youtube.com/@tbit_kr"><span class="vn">5</span><span>권신찬 목사 채널 영상 모음</span></button></li></ul>
-  <div class="vlinks"><a class="btn" id="ytopen" href="https://youtu.be/l_5ZyV4oPSg" target="_blank" rel="noopener">유튜브에서 보기</a><a class="btn" href="https://www.youtube.com/@tbit_kr" target="_blank" rel="noopener">권신찬 채널</a></div>
+  <ul class="vlist"><li><button type="button" class="vbtn on" data-i="0" data-t="세미나 소개 영상" data-src="https://www.youtube-nocookie.com/embed/l_5ZyV4oPSg?rel=0&playsinline=1" data-yt="https://youtu.be/l_5ZyV4oPSg"><span class="vn">1</span><span class="vt">세미나 소개 영상</span></button></li><li><button type="button" class="vbtn" data-i="1" data-t="[성경은 사실이다] 성경은 사실이다 1회 · 창조는 과학적 사실이다" data-src="https://www.youtube-nocookie.com/embed/0yo7SfOx9IQ?rel=0&playsinline=1" data-yt="https://www.youtube.com/watch?v=0yo7SfOx9IQ"><span class="vn">2</span><span class="vt"><em class="src">성경은 사실이다</em>성경은 사실이다 1회 · 창조는 과학적 사실이다</span></button></li><li><button type="button" class="vbtn" data-i="2" data-t="[권신찬] 성경은 사실이다 1회 · 거듭남과 영혼의 평화" data-src="https://www.youtube-nocookie.com/embed/N8OdLIDWIgI?rel=0&playsinline=1" data-yt="https://www.youtube.com/watch?v=N8OdLIDWIgI"><span class="vn">3</span><span class="vt"><em class="src">권신찬</em>성경은 사실이다 1회 · 거듭남과 영혼의 평화</span></button></li><li><button type="button" class="vbtn" data-i="3" data-t="[성경은 사실이다] 성경은 사실이다 전체 강연 (16편 재생목록)" data-src="https://www.youtube-nocookie.com/embed/videoseries?list=PLAvB3XNoE5TZnIw5zsKDbws8NYAKd1eE9&rel=0&playsinline=1" data-yt="https://www.youtube.com/playlist?list=PLAvB3XNoE5TZnIw5zsKDbws8NYAKd1eE9"><span class="vn">4</span><span class="vt"><em class="src">성경은 사실이다</em>성경은 사실이다 전체 강연 (16편 재생목록)</span></button></li><li><button type="button" class="vbtn" data-i="4" data-t="[권신찬] 성경은 사실이다 4회 · 계획된 끝 날의 시나리오" data-src="https://www.youtube-nocookie.com/embed/m6hQ1N0Iy58?rel=0&playsinline=1" data-yt="https://www.youtube.com/watch?v=m6hQ1N0Iy58"><span class="vn">5</span><span class="vt"><em class="src">권신찬</em>성경은 사실이다 4회 · 계획된 끝 날의 시나리오</span></button></li><li><button type="button" class="vbtn" data-i="5" data-t="[성경은 사실이다] 채널 영상 모음" data-src="https://www.youtube-nocookie.com/embed/videoseries?list=UUlUC8PARmjONzGy0F4lZXsw&rel=0&playsinline=1" data-yt="https://www.youtube.com/channel/UClUC8PARmjONzGy0F4lZXsw"><span class="vn">6</span><span class="vt"><em class="src">성경은 사실이다</em>채널 영상 모음</span></button></li><li><button type="button" class="vbtn" data-i="6" data-t="[권신찬] 채널 영상 모음" data-src="https://www.youtube-nocookie.com/embed/videoseries?list=UUQSQJ5tJfzVXprhvoajyelg&rel=0&playsinline=1" data-yt="https://www.youtube.com/@tbit_kr"><span class="vn">7</span><span class="vt"><em class="src">권신찬</em>채널 영상 모음</span></button></li></ul>
+  <div class="vlinks"><a class="btn wide" id="ytopen" href="https://youtu.be/l_5ZyV4oPSg" target="_blank" rel="noopener">유튜브에서 보기</a><a class="btn" href="https://www.youtube.com/channel/UClUC8PARmjONzGy0F4lZXsw" target="_blank" rel="noopener">성경은 사실이다 채널</a><a class="btn" href="https://www.youtube.com/@tbit_kr" target="_blank" rel="noopener">권신찬 채널</a></div>
 </section>
 
 <section>
@@ -214,7 +218,7 @@ h2{font-weight:800}.day .d{font-family:var(--head);font-weight:800;color:var(--a
   var fr=document.getElementById("vframe"),now=document.getElementById("vnow"),yt=document.getElementById("ytopen");
   var btns=[].slice.call(document.querySelectorAll(".vbtn"));
   function play(i,scroll){var b=btns[i];if(!b)return;btns.forEach(function(x){x.classList.remove("on")});b.classList.add("on");
-    fr.src=b.getAttribute("data-src");now.textContent=b.textContent.replace(/^\d+/,"");yt.href=b.getAttribute("data-yt");
+    fr.src=b.getAttribute("data-src");now.textContent=b.getAttribute("data-t");yt.href=b.getAttribute("data-yt");
     if(scroll)document.getElementById("videos").scrollIntoView({behavior:"smooth",block:"start"});}
   btns.forEach(function(b,i){b.addEventListener("click",function(){play(i,false)})});
   [].slice.call(document.querySelectorAll(".vlink")).forEach(function(l){l.addEventListener("click",function(){play(+l.getAttribute("data-v"),true)})});
